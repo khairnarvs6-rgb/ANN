@@ -1,0 +1,24 @@
+seed: 42
+
+data:
+  test_size: 0.2
+  val_size: 0.15
+
+model:
+  hidden_layers: [32, 16]
+  hidden_activation: relu      # relu | tanh | sigmoid
+  dropout: 0.2
+  l2: 0.0005
+
+training:
+  optimizer: adam              # adam | sgd
+  learning_rate: 0.001
+  epochs: 300
+  batch_size: 32
+  patience: 25                 # early stopping
+
+paths:
+  raw_data: data/raw/breast_cancer.csv
+  processed_dir: data/processed
+  model_path: models/ann_model.npz
+  figures_dir: reports/figures
